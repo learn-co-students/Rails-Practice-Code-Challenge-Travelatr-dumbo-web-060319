@@ -1,0 +1,22 @@
+<h1>Add a Blogger ! 🦹‍♂️ </h1>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error_message| %>
+        <li>
+            <%= error_message %>
+        </li>
+    <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @blogger do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %>
+    <%= f.submit "Add this blogger !" %>
+
+<% end %>

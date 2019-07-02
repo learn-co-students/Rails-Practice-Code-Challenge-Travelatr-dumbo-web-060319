@@ -1,0 +1,21 @@
+<h1><%= @destination.name %></h1>
+<h2><%= @destination.country %></h2>
+
+<h3>Posts about this destination</h3>
+<ul>
+    <% @posts.each do |post| %>
+        <li>    
+            <%= link_to post.title, post_path(post) %>
+        </li>
+    <% end %>
+</ul>
+
+<h2>Featured Post 📝 </h2>
+<%= link_to @featured_post.title, post_path(@featured_post) %>
+
+<h2>Average age of Bloggers for this location: <%= @average_blogger_age %></h2>
+
+<%= link_to "All locations", destinations_path %>
+<br>
+<%= link_to "All authors", bloggers_path %>
+

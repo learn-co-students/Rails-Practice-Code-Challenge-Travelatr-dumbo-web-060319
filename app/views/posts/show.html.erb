@@ -1,0 +1,17 @@
+<h1><%= @post.title %></h1>
+<h2>The story: </h2>
+<p><%= @post.content %></p>
+<br>
+<p>Likes: <%= @post.likes %></p>
+<%= button_to "Like!!", like_path(@post) %>
+<!-- Like button --> 
+<br>
+<%= link_to "Edit this Post", edit_post_path(@post) %>
+<br>
+<br>
+<%= link_to "Author", blogger_path(@post.blogger) %>
+<br>
+<%= link_to "Destination", destination_path(@post.destination) %>
+<br>
+<%= link_to "All posts", posts_path %>
+
