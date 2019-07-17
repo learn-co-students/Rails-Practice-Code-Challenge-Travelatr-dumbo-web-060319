@@ -1,0 +1,10 @@
+<h1>List of Bloggers</h1>
+
+<% @bloggers.each do | blogger | %>
+
+    <ul>
+        <li><%= link_to blogger.name, blogger %></li><br>   
+    </ul>
+
+<% end %>
+

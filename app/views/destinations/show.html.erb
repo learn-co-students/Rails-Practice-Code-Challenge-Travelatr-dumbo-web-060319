@@ -1,0 +1,10 @@
+<h1><%= @destination.name %></h1>
+<hr>
+
+
+    <% @destination.posts.each do | post | %>
+            <ul>
+                <li><%= "#{post.title} - #{post.content}" %></li><br>
+            </ul>
+    <% end %>
+
