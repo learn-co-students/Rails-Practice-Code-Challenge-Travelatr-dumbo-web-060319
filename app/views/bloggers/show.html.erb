@@ -1,0 +1,19 @@
+<p><%= link_to "All bloggers 🧠", bloggers_path %></p>
+<%= link_to "All posts 🖊", posts_path %>
+
+<h1><%= @blogger.name %></h1>
+
+<h2>Age: <%= @blogger.age %></h2>
+<h3>Bio: <%= @blogger.bio %></h3>
+
+<h4>All of this bloggers posts: </h4>
+<ul>
+    <% @blogger.posts.each do |post| %>
+        <li>
+            <%= link_to post.title, post_path(post) %>
+        </li>
+    <% end %>
+</ul>
+
+<p>Total Likes: <%= @total_likes %></p>
+<p>Featured Post: <%= link_to "Super popular post", post_path(@feat_post) %></p>

@@ -1,0 +1,16 @@
+<h1> All of the Posts 🧐 </h1>
+
+<ul> 
+    <% @posts.each do |post| %>
+        <li>
+            <%= link_to post.title, post_path(post) %>
+        </li>
+    <% end %>
+</ul>
+<br>
+<%= link_to "Add a new post 📓", new_post_path %>
+<br>
+
+<%= link_to "All of the Bloggers", bloggers_path %>
+<br>
+<%= link_to "All of the Destinations", destinations_path %>
